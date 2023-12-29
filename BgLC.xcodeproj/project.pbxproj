@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3B45B9F2B3EF303005298C8 /* IndividualsCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B45B9E2B3EF303005298C8 /* IndividualsCounter.swift */; };
 		A3B4E8A12B3EEBF300386A6D /* BgLCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4E8A02B3EEBF300386A6D /* BgLCApp.swift */; };
-		A3B4E8A32B3EEBF300386A6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4E8A22B3EEBF300386A6D /* ContentView.swift */; };
+		A3B4E8A32B3EEBF300386A6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4E8A22B3EEBF300386A6D /* MainView.swift */; };
 		A3B4E8A52B3EEBF400386A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B4E8A42B3EEBF400386A6D /* Assets.xcassets */; };
 		A3B4E8A82B3EEBF400386A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B4E8A72B3EEBF400386A6D /* Preview Assets.xcassets */; };
 		A3B4E8B22B3EEBF400386A6D /* BgLCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4E8B12B3EEBF400386A6D /* BgLCTests.swift */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3B45B9E2B3EF303005298C8 /* IndividualsCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsCounter.swift; sourceTree = "<group>"; };
 		A3B4E89D2B3EEBF300386A6D /* BgLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BgLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B4E8A02B3EEBF300386A6D /* BgLCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgLCApp.swift; sourceTree = "<group>"; };
-		A3B4E8A22B3EEBF300386A6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A3B4E8A22B3EEBF300386A6D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A3B4E8A42B3EEBF400386A6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3B4E8A72B3EEBF400386A6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3B4E8AD2B3EEBF400386A6D /* BgLCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BgLCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3B45B9B2B3EEF10005298C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3B45B9E2B3EF303005298C8 /* IndividualsCounter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3B45B9C2B3EEF19005298C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3B4E8A22B3EEBF300386A6D /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A3B45B9D2B3EEF2F005298C8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A3B4E8A62B3EEBF400386A6D /* Preview Content */,
+				A3B4E8A42B3EEBF400386A6D /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		A3B4E8942B3EEBF300386A6D = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +121,10 @@
 		A3B4E89F2B3EEBF300386A6D /* BgLC */ = {
 			isa = PBXGroup;
 			children = (
+				A3B45B9C2B3EEF19005298C8 /* Views */,
+				A3B45B9B2B3EEF10005298C8 /* Models */,
 				A3B4E8A02B3EEBF300386A6D /* BgLCApp.swift */,
-				A3B4E8A22B3EEBF300386A6D /* ContentView.swift */,
-				A3B4E8A42B3EEBF400386A6D /* Assets.xcassets */,
-				A3B4E8A62B3EEBF400386A6D /* Preview Content */,
+				A3B45B9D2B3EEF2F005298C8 /* Assets */,
 			);
 			path = BgLC;
 			sourceTree = "<group>";
@@ -257,7 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3B4E8A32B3EEBF300386A6D /* ContentView.swift in Sources */,
+				A3B45B9F2B3EF303005298C8 /* IndividualsCounter.swift in Sources */,
+				A3B4E8A32B3EEBF300386A6D /* MainView.swift in Sources */,
 				A3B4E8A12B3EEBF300386A6D /* BgLCApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +444,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BgLC/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BgLC/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = URA6K2N237;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -445,7 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BgLC/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"BgLC/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = URA6K2N237;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
