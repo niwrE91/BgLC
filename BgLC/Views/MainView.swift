@@ -68,6 +68,9 @@ struct MainView: View {
                 .scaledToFill()
                 .frame(width: 300)
             )
+            Button("Bestätigen") {
+                print("Done")
+            }
         }
         .padding()
     }
