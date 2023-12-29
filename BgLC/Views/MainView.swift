@@ -11,10 +11,10 @@ struct MainView: View {
     var body: some View {
         
         VStack(spacing: 150) {
-            HStack{
-                VStack{
+            HStack(spacing: 40){
+                VStack(spacing: 30){
                     Text("Spieler")
-                    HStack{
+                    HStack(spacing: 15){
                         Button(action: {
                                   print("button pressed")
 
@@ -39,10 +39,10 @@ struct MainView: View {
                 .scaledToFill()
                 .frame(width: 300)
             )
-            HStack{
-                VStack{
+            HStack(spacing: 40){
+                VStack(spacing: 30){
                     Text("Gegner")
-                    HStack{
+                    HStack(spacing: 15){
                         Button(action: {
                                   print("button pressed")
 
