@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31C9ACA2B418B82000BAB82 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C9AC92B418B82000BAB82 /* SettingsView.swift */; };
 		A38CBAD72B3F671D00EB4624 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD62B3F671D00EB4624 /* CounterView.swift */; };
 		A38CBAD92B3F693B00EB4624 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD82B3F693B00EB4624 /* CounterViewModel.swift */; };
 		A3B45B9F2B3EF303005298C8 /* IndividualsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A31C9AC92B418B82000BAB82 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A38CBAD62B3F671D00EB4624 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A38CBAD82B3F693B00EB4624 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 		A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsModel.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				A3B4E8A22B3EEBF300386A6D /* MainView.swift */,
 				A38CBAD62B3F671D00EB4624 /* CounterView.swift */,
+				A31C9AC92B418B82000BAB82 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				A38CBAD92B3F693B00EB4624 /* CounterViewModel.swift in Sources */,
 				A38CBAD72B3F671D00EB4624 /* CounterView.swift in Sources */,
 				A3B45B9F2B3EF303005298C8 /* IndividualsModel.swift in Sources */,
+				A31C9ACA2B418B82000BAB82 /* SettingsView.swift in Sources */,
 				A3B4E8A32B3EEBF300386A6D /* MainView.swift in Sources */,
 				A3B4E8A12B3EEBF300386A6D /* BgLCApp.swift in Sources */,
 			);

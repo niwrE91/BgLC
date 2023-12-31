@@ -19,7 +19,7 @@ struct CounterView: View {
             VStack(spacing: 5) {
                 Text(individual.name)
                     .font(
-                        .system(size: 30, weight: .heavy, design: .default))
+                        .system(size: 25, weight: .heavy, design: .default))
                 
                 HStack(spacing: -15) {
                     if counterViewModel.count == 0 {
@@ -79,6 +79,7 @@ struct CounterView: View {
         .background(
             Image(systemName: "battery.100")
                 .resizable()
+                .aspectRatio(16/9, contentMode: .fit)
                 .foregroundColor(batteryColor)
         )
     }
@@ -86,6 +87,6 @@ struct CounterView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView(counterViewModel: CounterViewModel(), individual: IndividualsModel(name: "Spieler", count: 0, imageName: "person.2"), batteryColor: .blue)
+        CounterView(counterViewModel: CounterViewModel(), individual: IndividualsModel(name: "Oponant", count: 0, imageName: "person.2"), batteryColor: .blue)
     }
 }
