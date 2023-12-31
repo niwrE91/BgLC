@@ -16,9 +16,9 @@ struct SettingsView: View {
         NavigationView {
             VStack(spacing: 50) {
                 
-                CounterView(counterViewModel: personCounterViewModel, individual: IndividualsModel(name: "Player", count: 0, imageName: "person.2"), batteryColor: .cyan)
+                CounterView(counterViewModel: personCounterViewModel, individual: IndividualsModel(name: "Player", count: 0, imageName: "person.2"), batteryColor: .indigo)
                 
-                CounterView(counterViewModel: opponentCounterViewModel, individual: IndividualsModel(name: "Oponant", count: 0, imageName: "person.crop.circle.badge.exclamationmark.fill"), batteryColor: .red)
+                CounterView(counterViewModel: opponentCounterViewModel, individual: IndividualsModel(name: "Oponant", count: 0, imageName: "person.crop.circle.badge.exclamationmark.fill"), batteryColor: .brown)
                 
                 Button(action: {
                     dismiss()
