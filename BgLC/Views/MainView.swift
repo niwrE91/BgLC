@@ -12,20 +12,32 @@ struct MainView: View {
     @StateObject private var opponentCounterViewModel = CounterViewModel()
     
     var body: some View {
-        VStack(spacing: 150) {
-            CounterView(counterViewModel: personCounterViewModel, individual: IndividualsModel(name: "Spieler", count: 0, imageName: "person.2"))
-            
-            CounterView(counterViewModel: opponentCounterViewModel, individual: IndividualsModel(name: "Gegner", count: 0, imageName: "person.crop.circle.badge.exclamationmark.fill"), batteryColor: .red)
-            
-            Button("Bestätigen") {
-                print("Done")
+        NavigationView {
+            List {
+
+                VStack(spacing: 50) {
+                    
+                    CounterView(counterViewModel: personCounterViewModel, individual: IndividualsModel(name: "Spieler", count: 0, imageName: "person.2"))
+                    
+                    CounterView(counterViewModel: opponentCounterViewModel, individual: IndividualsModel(name: "Gegner", count: 0, imageName: "person.crop.circle.badge.exclamationmark.fill"), batteryColor: .red)
+                    
+                }
+                .padding()
+                .navigationTitle("BgLC")
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            print("Gear")
+                        }) {
+                            Image(systemName: "gearshape")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                        }
+                    }
+                }
             }
-            .foregroundColor(.black)
-            .buttonStyle(.borderedProminent)
-            .tint(.green)
-            
+            .frame(alignment: .center)
         }
-        .padding()
     }
 }
 

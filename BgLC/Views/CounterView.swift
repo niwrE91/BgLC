@@ -15,12 +15,13 @@ struct CounterView: View {
     
     var body: some View {
         HStack(spacing: 20){
+            
             VStack(spacing: 5) {
                 Text(individual.name)
                     .font(
                         .system(size: 30, weight: .heavy, design: .default))
                 
-                HStack(spacing: -5) {
+                HStack(spacing: -15) {
                     if counterViewModel.count == 0 {
                         Button(action: {
                             self.counterViewModel.decrement()
@@ -47,23 +48,37 @@ struct CounterView: View {
                         .font(.title)
                         .frame(width: 50)
                     
-                    Button(action: {
-                        self.counterViewModel.increment()
-                    }) {
-                        Image(systemName: "plus.circle.fill")
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width: buttonSize, height: buttonSize)
+                    if counterViewModel.count == 6 {
+                        Button(action: {
+                            self.counterViewModel.decrement()
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .resizable()
+                                .frame(width: buttonSize, height: buttonSize)
+                        }
+                        .padding()
+                        .disabled(true)
+                    } else {
+                        Button(action: {
+                            self.counterViewModel.increment()
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .renderingMode(.original)
+                                .resizable()
+                                .frame(width: buttonSize, height: buttonSize)
+                        }
+                        .padding()
                     }
-                    .padding()
                 }
             }
             Image(systemName: individual.imageName ?? "person.2").font(.system(size: 40))
-        }.background(
-            Image(systemName: "battery.0")
+        }
+        .padding([.trailing], 80)
+        .padding([.top, .leading], 50)
+        .padding(.bottom, 40)
+        .background(
+            Image(systemName: "battery.100")
                 .resizable()
-                .scaledToFill()
-                .frame(width: 320)
                 .foregroundColor(batteryColor)
         )
     }
@@ -71,6 +86,6 @@ struct CounterView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView(counterViewModel: CounterViewModel(), individual: IndividualsModel(name: "Spieler", count: 0, imageName: "person.2"), batteryColor: .red)
+        CounterView(counterViewModel: CounterViewModel(), individual: IndividualsModel(name: "Spieler", count: 0, imageName: "person.2"), batteryColor: .blue)
     }
 }
