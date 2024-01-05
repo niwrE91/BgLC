@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject private var personCounterViewModel = CounterViewModel()
-    @StateObject private var opponentCounterViewModel = CounterViewModel()
+    @StateObject private var personCounterViewModel = CounterModel()
+    @StateObject private var opponentCounterViewModel = CounterModel()
+    
     
     var body: some View {
         NavigationView {

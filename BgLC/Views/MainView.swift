@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var personCounterViewModel = CounterViewModel()
-    @StateObject private var opponentCounterViewModel = CounterViewModel()
+    @StateObject private var personCounterViewModel = CounterModel()
+    @StateObject private var opponentCounterViewModel = CounterModel()
     @State var showingSettings = false
     
     var body: some View {
