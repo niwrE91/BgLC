@@ -8,17 +8,17 @@
 import SwiftUI
 
 class NumberCounterModel: ObservableObject {
-
+    
     func incrementByOne(number: Double) -> Double{
         var newNumber = number
-            newNumber += 1
+        newNumber += 1
         
         return newNumber
     }
-
+    
     func decrementByOne(number: Double) -> Double{
         var newNumber = number
-            newNumber -= 1
+        newNumber -= 1
         
         return newNumber
     }

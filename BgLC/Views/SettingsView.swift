@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
     @Environment(\.dismiss) var dismiss
     @ObservedObject var personIndividualModel: IndividualsModel
     @ObservedObject var opponentIndividualModel: IndividualsModel
