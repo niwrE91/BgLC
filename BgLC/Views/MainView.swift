@@ -16,7 +16,6 @@ struct MainView: View {
         NavigationView {
             List {
                 
-                
                 VStack(spacing: 50) {
                     
                 }
