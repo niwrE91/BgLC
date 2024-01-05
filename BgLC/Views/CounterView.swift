@@ -11,7 +11,7 @@ struct CounterView: View {
     @ObservedObject var counterViewModel: CounterViewModel
     var individual: IndividualsModel
     var batteryColor: Color = .green
-    var buttonSize: CGFloat = 40
+    var buttonSize: Double = 40
     
     var body: some View {
         HStack(spacing: 20){
@@ -22,43 +22,22 @@ struct CounterView: View {
                         .system(size: 25, weight: .heavy, design: .default))
                 
                 HStack(spacing: -15) {
-                    if counterViewModel.count == 0 {
                         Button(action: {
                             self.counterViewModel.decrement()
                         }) {
                             Image(systemName: "minus.circle.fill")
                                 .resizable()
-                                .frame(width: buttonSize, height: buttonSize)
-                        }
-                        .padding()
-                        .disabled(true)
-                    }
-                    else {
-                        Button(action: {
-                            self.counterViewModel.decrement()
-                        }) {
-                            Image(systemName: "minus.circle.fill")
                                 .renderingMode(.original)
-                                .resizable()
                                 .frame(width: buttonSize, height: buttonSize)
                         }
                         .padding()
-                    }
+                        .disabled(counterViewModel.count == 0)
+                        .opacity(counterViewModel.count == 0 ? 0.4 : 1)
+                    
                     Text("\(counterViewModel.count)")
                         .font(.title)
                         .frame(width: 50)
-                    
-                    if counterViewModel.count == 6 {
-                        Button(action: {
-                            self.counterViewModel.decrement()
-                        }) {
-                            Image(systemName: "plus.circle.fill")
-                                .resizable()
-                                .frame(width: buttonSize, height: buttonSize)
-                        }
-                        .padding()
-                        .disabled(true)
-                    } else {
+
                         Button(action: {
                             self.counterViewModel.increment()
                         }) {
@@ -68,7 +47,8 @@ struct CounterView: View {
                                 .frame(width: buttonSize, height: buttonSize)
                         }
                         .padding()
-                    }
+                        .disabled(counterViewModel.count == 6)
+                        .opacity(counterViewModel.count == 6 ? 0.4 : 1)
                 }
             }
             Image(systemName: individual.imageName ?? "person.2").font(.system(size: 40))
