@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var personCounterViewModel = CounterModel()
-    @StateObject private var opponentCounterViewModel = CounterModel()
+    @StateObject var personIndividualModel = IndividualsModel(name: "Person", count: 0, imageName: "person.fill.badge.plus")
+    @StateObject var opponentIndividualModel = IndividualsModel(name: "Oponant", count: 0, imageName: "person.crop.circle.badge.exclamationmark")
     @State var showingSettings = false
     
     var body: some View {
         NavigationView {
             List {
+                
+                Text("\(personIndividualModel.count)")
                 
                 VStack(spacing: 50) {
                     
@@ -30,7 +32,7 @@ struct MainView: View {
                                 .frame(width: 40, height: 40)
                         }
                         .sheet(isPresented: $showingSettings) {
-                            SettingsView()
+                            SettingsView(personIndividualModel: personIndividualModel, opponentIndividualModel: opponentIndividualModel)
                         }
                     }
                 }

@@ -8,8 +8,14 @@
 import Foundation
 
 // MARK: - IndividualsCounter
-struct IndividualsModel {
-    let name: String
-    let count: Int
-    let imageName: String?
+class IndividualsModel: ObservableObject {
+    @Published var name: String = ""
+    @Published var count: Double = 0.0
+    @Published var imageName: String = ""
+    
+    init(name: String, count: Double, imageName: String) {
+        self.name = name
+        self.count = count
+        self.imageName = imageName
+    }
 }

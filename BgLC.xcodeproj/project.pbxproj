@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A31C9ACA2B418B82000BAB82 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C9AC92B418B82000BAB82 /* SettingsView.swift */; };
 		A38CBAD72B3F671D00EB4624 /* IndividuallCountSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD62B3F671D00EB4624 /* IndividuallCountSelectorView.swift */; };
-		A38CBAD92B3F693B00EB4624 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD82B3F693B00EB4624 /* CounterModel.swift */; };
+		A38CBAD92B3F693B00EB4624 /* NumberCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD82B3F693B00EB4624 /* NumberCounterModel.swift */; };
 		A3B45B9F2B3EF303005298C8 /* IndividualsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */; };
 		A3B4E8A12B3EEBF300386A6D /* BgLCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4E8A02B3EEBF300386A6D /* BgLCApp.swift */; };
 		A3B4E8A32B3EEBF300386A6D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B4E8A22B3EEBF300386A6D /* MainView.swift */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		A31C9AC92B418B82000BAB82 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A38CBAD62B3F671D00EB4624 /* IndividuallCountSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividuallCountSelectorView.swift; sourceTree = "<group>"; };
-		A38CBAD82B3F693B00EB4624 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		A38CBAD82B3F693B00EB4624 /* NumberCounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCounterModel.swift; sourceTree = "<group>"; };
 		A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsModel.swift; sourceTree = "<group>"; };
 		A3B4E89D2B3EEBF300386A6D /* BgLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BgLC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B4E8A02B3EEBF300386A6D /* BgLCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgLCApp.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */,
-				A38CBAD82B3F693B00EB4624 /* CounterModel.swift */,
+				A38CBAD82B3F693B00EB4624 /* NumberCounterModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A38CBAD92B3F693B00EB4624 /* CounterModel.swift in Sources */,
+				A38CBAD92B3F693B00EB4624 /* NumberCounterModel.swift in Sources */,
 				A38CBAD72B3F671D00EB4624 /* IndividuallCountSelectorView.swift in Sources */,
 				A3B45B9F2B3EF303005298C8 /* IndividualsModel.swift in Sources */,
 				A31C9ACA2B418B82000BAB82 /* SettingsView.swift in Sources */,

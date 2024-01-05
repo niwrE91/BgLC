@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct IndividuallCountSelectorView: View {
-    @ObservedObject var counterViewModel: CounterModel
-    var individual: IndividualsModel
-    var batteryColor: Color = .green
-    var buttonSize: Double = 40
+    
+    @State private var individual: IndividualsModel
+    
+    init(individual: IndividualsModel) {
+        self.individual = individual
+    }
+    
+    private var counterViewModel = NumberCounterModel()
+    private var buttonSize: Double = 40
     
     var body: some View {
         ZStack{
             Image(systemName: "battery.100")
                 .resizable()
-                .frame(minWidth: 230, maxWidth: 360, minHeight: 220, maxHeight: 180)
-                .foregroundColor(batteryColor)
+                .frame(minWidth: 230, maxWidth: 360, minHeight: 180, maxHeight: 220)
+                .foregroundColor(Color(red: getRandomNumber(), green: getRandomNumber(), blue: getRandomNumber()))
             
             HStack(spacing: 20){
                 
@@ -29,7 +34,7 @@ struct IndividuallCountSelectorView: View {
                     
                     HStack(spacing: -15) {
                         Button(action: {
-                            self.counterViewModel.decrement()
+                            individual.count = counterViewModel.decrementByOne(number: individual.count)
                         }) {
                             Image(systemName: "minus.circle.fill")
                                 .resizable()
@@ -37,15 +42,15 @@ struct IndividuallCountSelectorView: View {
                                 .frame(width: buttonSize, height: buttonSize)
                         }
                         .padding()
-                        .disabled(counterViewModel.count == 0)
-                        .opacity(counterViewModel.count == 0 ? 0.4 : 1)
+                        .disabled(individual.count == 0)
+                        .opacity(individual.count == 0 ? 0.4 : 1)
                         
-                        Text("\(counterViewModel.count)")
+                        Text(String(format: "%.0f",individual.count))
                             .font(.title)
                             .frame(width: 50)
                         
                         Button(action: {
-                            self.counterViewModel.increment()
+                            individual.count = counterViewModel.incrementByOne(number: individual.count)
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .renderingMode(.original)
@@ -53,12 +58,12 @@ struct IndividuallCountSelectorView: View {
                                 .frame(width: buttonSize, height: buttonSize)
                         }
                         .padding()
-                        .disabled(counterViewModel.count == 6)
-                        .opacity(counterViewModel.count == 6 ? 0.4 : 1)
+                        .disabled(individual.count == 6)
+                        .opacity(individual.count == 6 ? 0.4 : 1)
                     }
                     .frame(minWidth: 180)
                 }
-                Image(systemName: individual.imageName ?? "person.2")
+                Image(systemName: individual.imageName )
                     .font(.system(size: 30))
             }
             .padding([.trailing], 80)
@@ -68,10 +73,14 @@ struct IndividuallCountSelectorView: View {
         }
         
     }
+    
+    private func getRandomNumber() -> Double {
+        return Double.random(in: 0...1)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        IndividuallCountSelectorView(counterViewModel: CounterModel(), individual: IndividualsModel(name: "Oponant", count: 0, imageName: "person.2"), batteryColor: .blue)
+        IndividuallCountSelectorView(individual: IndividualsModel(name: "Erwin", count: 0, imageName: "internaldrive.fill"))
     }
 }

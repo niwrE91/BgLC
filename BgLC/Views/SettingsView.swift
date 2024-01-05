@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.dismiss) var dismiss
-    @StateObject private var personCounterViewModel = CounterModel()
-    @StateObject private var opponentCounterViewModel = CounterModel()
     
+    @Environment(\.dismiss) var dismiss
+    @ObservedObject var personIndividualModel: IndividualsModel
+    @ObservedObject var opponentIndividualModel: IndividualsModel
     
     var body: some View {
         NavigationView {
             VStack(spacing: 50) {
                 
-                IndividuallCountSelectorView(counterViewModel: personCounterViewModel, individual: IndividualsModel(name: "Player", count: 0, imageName: "person.2"), batteryColor: .indigo)
+                IndividuallCountSelectorView(individual: personIndividualModel)
                 
-                IndividuallCountSelectorView(counterViewModel: opponentCounterViewModel, individual: IndividualsModel(name: "Oponant", count: 0, imageName: "person.crop.circle.badge.exclamationmark.fill"), batteryColor: .brown)
+                IndividuallCountSelectorView(individual: opponentIndividualModel)
                 
                 Button(action: {
                     dismiss()
@@ -35,6 +35,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(personIndividualModel: IndividualsModel(name: "Erwin", count: 0, imageName: "thermometer.snowflake.circle.fill"), opponentIndividualModel: IndividualsModel(name: "Oponant", count: 0, imageName: "target"))
     }
 }
