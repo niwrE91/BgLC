@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var personIndividualModel = IndividualsModel(name: "Person", count: 0, imageName: "person.fill.badge.plus")
-    @StateObject var opponentIndividualModel = IndividualsModel(name: "Oponant", count: 0, imageName: "person.crop.circle.badge.exclamationmark")
-    @State var showingSettings = false
+    @StateObject private var personIndividualModel = IndividualsModel(name: "Person", count: 0, imageName: "person.fill.badge.plus")
+    @StateObject private var opponentIndividualModel = IndividualsModel(name: "Oponant", count: 0, imageName: "person.crop.circle.badge.exclamationmark")
+    @State private var showingSettings = false
     
     var body: some View {
         NavigationView {
