@@ -17,6 +17,7 @@ struct MainView: View {
             List {
                 
                 Text("\(personIndividualModel.count)")
+                HeartView(lifeCount: 8)
                 
                 VStack(spacing: 50) {
                     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A31C9ACA2B418B82000BAB82 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C9AC92B418B82000BAB82 /* SettingsView.swift */; };
+		A37E320C2B495D680097549E /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E320B2B495D680097549E /* HeartView.swift */; };
 		A38CBAD72B3F671D00EB4624 /* IndividuallCountSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD62B3F671D00EB4624 /* IndividuallCountSelectorView.swift */; };
 		A38CBAD92B3F693B00EB4624 /* NumberCounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38CBAD82B3F693B00EB4624 /* NumberCounterModel.swift */; };
 		A3B45B9F2B3EF303005298C8 /* IndividualsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		A31C9AC92B418B82000BAB82 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A37E320B2B495D680097549E /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 		A38CBAD62B3F671D00EB4624 /* IndividuallCountSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividuallCountSelectorView.swift; sourceTree = "<group>"; };
 		A38CBAD82B3F693B00EB4624 /* NumberCounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCounterModel.swift; sourceTree = "<group>"; };
 		A3B45B9E2B3EF303005298C8 /* IndividualsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualsModel.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				A3B4E8A22B3EEBF300386A6D /* MainView.swift */,
 				A31C9AC92B418B82000BAB82 /* SettingsView.swift */,
 				A38CBAD62B3F671D00EB4624 /* IndividuallCountSelectorView.swift */,
+				A37E320B2B495D680097549E /* HeartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				A38CBAD92B3F693B00EB4624 /* NumberCounterModel.swift in Sources */,
 				A38CBAD72B3F671D00EB4624 /* IndividuallCountSelectorView.swift in Sources */,
+				A37E320C2B495D680097549E /* HeartView.swift in Sources */,
 				A3B45B9F2B3EF303005298C8 /* IndividualsModel.swift in Sources */,
 				A31C9ACA2B418B82000BAB82 /* SettingsView.swift in Sources */,
 				A3B4E8A32B3EEBF300386A6D /* MainView.swift in Sources */,
