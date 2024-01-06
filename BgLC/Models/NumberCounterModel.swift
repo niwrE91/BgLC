@@ -9,14 +9,14 @@ import SwiftUI
 
 class NumberCounterModel: ObservableObject {
     
-    func incrementByOne(number: Double) -> Double{
+    func incrementByOne(number: Int) -> Int{
         var newNumber = number
         newNumber += 1
         
         return newNumber
     }
     
-    func decrementByOne(number: Double) -> Double{
+    func decrementByOne(number: Int) -> Int{
         var newNumber = number
         newNumber -= 1
         

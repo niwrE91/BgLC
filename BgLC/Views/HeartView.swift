@@ -7,38 +7,44 @@
 
 import SwiftUI
 
+struct Heart: Identifiable {
+    var id: Int
+    var isFilled: Bool
+}
+
 struct HeartView: View {
     @State private var lifeCount: Int
+    @State private var hearts: [Heart]
     
     init(lifeCount: Int) {
         self.lifeCount = lifeCount
+        self.hearts = (0..<lifeCount).map { Heart(id: $0, isFilled: true) }
     }
-
+    
     var body: some View {
         HStack(spacing: 10) {
-            ForEach(0..<lifeCount) { index in
-                Image(systemName: self.heartImageName(index: index))
+            ForEach(hearts) { heart in
+                Image(systemName: self.heartImageName(isFilled: heart.isFilled))
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
                     .foregroundColor(.red)
                     .onTapGesture {
-                        self.toggleHeart(index: index)
+                        self.toggleHeart(heart: heart)
                     }
             }
         }
         .padding()
     }
-
-    private func heartImageName(index: Int) -> String {
-        return index < lifeCount ? "heart.fill" : "heart"
+    
+    private func heartImageName(isFilled: Bool) -> String {
+        return isFilled ? "heart.fill" : "heart"
     }
-
-    private func toggleHeart(index: Int) {
-        if index < lifeCount {
-            lifeCount -= 1
-        } else if index >= lifeCount {
-            lifeCount += 1
+    
+    private func toggleHeart(heart: Heart) {
+        if let index = hearts.firstIndex(where: { $0.id == heart.id }) {
+            hearts[index].isFilled.toggle()
+            hearts.sort(by: { $0.isFilled && !$1.isFilled })
         }
     }
 }

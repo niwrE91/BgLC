@@ -34,6 +34,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(personIndividualModel: IndividualsModel(name: "Erwin", count: 0, imageName: "thermometer.snowflake.circle.fill"), opponentIndividualModel: IndividualsModel(name: "Oponant", count: 0, imageName: "target"))
+        SettingsView(personIndividualModel: IndividualsModel(name: "Erwin", count: 2, imageName: "thermometer.snowflake.circle.fill"), opponentIndividualModel: IndividualsModel(name: "Oponant", count: 4, imageName: "target"))
     }
 }

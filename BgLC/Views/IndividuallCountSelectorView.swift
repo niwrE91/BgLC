@@ -42,10 +42,10 @@ struct IndividuallCountSelectorView: View {
                                 .frame(width: buttonSize, height: buttonSize)
                         }
                         .padding()
-                        .disabled(individual.count == 0)
-                        .opacity(individual.count == 0 ? 0.4 : 1)
+                        .disabled(individual.count == 1)
+                        .opacity(individual.count == 1 ? 0.4 : 1)
                         
-                        Text(String(format: "%.0f",individual.count))
+                        Text("\(individual.count)")
                             .font(.title)
                             .frame(width: 50)
                         
@@ -81,6 +81,6 @@ struct IndividuallCountSelectorView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        IndividuallCountSelectorView(individual: IndividualsModel(name: "Erwin", count: 0, imageName: "internaldrive.fill"))
+        IndividuallCountSelectorView(individual: IndividualsModel(name: "Erwin", count: 1, imageName: "internaldrive.fill"))
     }
 }
